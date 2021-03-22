@@ -40,4 +40,9 @@ public static void main(String[] args) {
 	NormalClassForInterface yu = new NormalClassForInterface();
 	
 }
+
+public void slep() {
+	// TODO Auto-generated method stub
+	
+}
 }
