@@ -3,8 +3,10 @@ import java.io.FileReader;
 import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -18,18 +20,18 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.restassured.RestAssured;
 public class FacebookStepDefinition extends DataDriverFrameworkConcept {
-	public static ChromeDriver driver;
+	public static WebDriver driver;
 	public FileReader reader;
 	public PageObjectModelConcept objRepository;
 
 	@Before(order=1)
 	public void launch() {
 		System.out.println("b4 order 1");
-      System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Believerz\\Automation\\driver\\chromedriver.exe");
-       driver = new ChromeDriver();   // browser launch 
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.get("https://www.facebook.com/");
+		  System.setProperty("webdriver.gecko.driver", "C:\\Users\\selva\\git\\repository3\\Automation\\driver\\geckodriver.exe");
+	        driver = new FirefoxDriver();   // browser launch 
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			driver.get("https://www.facebook.com/");
 		objRepository = new PageObjectModelConcept(driver);
 	}
 	@Before(order=2)

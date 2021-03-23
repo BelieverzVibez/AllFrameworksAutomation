@@ -8,7 +8,7 @@ import cucumber.api.SnippetType;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
-@CucumberOptions(features="E:\\Selenium\\Believerz\\Automation\\src\\test\\java\\FeatureFiles\\facebook.feature",
+@CucumberOptions(features="C:\\Users\\selva\\git\\repository3\\Automation\\src\\test\\java\\FeatureFiles\\facebook.feature",
 glue="stepDefinitions",
 plugin= {"pretty","html:E:\\Selenium\\Believerz\\Automation\\CucumberHtmlReports\\"},
 tags= {"@aravind"},  dryRun=false, monochrome=true, strict = true, snippets=SnippetType.CAMELCASE
